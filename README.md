@@ -15,7 +15,6 @@ Four artefacts, all keyed by the shortest-path tuple `(source, …, target)`:
 | Artefact | Meaning |
 |---|---|
 | `path_counts[path]` | Number of healthy participants whose weighted shortest path from `source` to `target` is exactly this tuple. |
-| `path_prob[path]` | Path count divide total number as probability of `path` across the participants who took it. |
 | `all_path_inclusion_rate[path]` → `df_all_inclusionRate` | Fraction of healthy participants for whom `path` is the shortest path between its endpoints. Returned as a DataFrame with the dataset name (`Language` / `MD`) as the column header. |
 
 `df_all_inclusionRate` is the primary output; it can be index-joined with a second run to place both networks side-by-side.
@@ -97,7 +96,6 @@ The notebook is organised into five sections that run top-to-bottom:
    - Load the AAL parcellation table → `aal_df`, and construct `aal_nodes = [0, …, 115]`.
 5. **Build the corpus**
    - For every participant and every ordered pair `(source, target)` of AAL nodes, compute the weighted shortest path via Floyd–Warshall (`transform='inv'`, so weight-to-distance is `1/w`), retrieve the path as a tuple of AAL indices, and update `path_counts`, `path_prob`, and `passnode_counts`.
-   -  Normalise `path_prob` from a running sum into a per-path mean.
    -  Convert `path_counts` into `all_path_inclusion_rate` and wrap as `df_all_inclusionRate`.
 
 ---
