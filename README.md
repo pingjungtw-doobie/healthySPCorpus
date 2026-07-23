@@ -79,7 +79,7 @@ Everything downstream reads from the resolved `config` dict, so no other cell ne
 | Config field | Language | MD |
 |---|---|---|
 | `column_name` | `LanguageNetwork` | `MD` |
-| `healthy_data_dir` | `../language_large/LQT_result/fMRI_Language` | `../MD_large/LQT_result/fMRI_MD` |
+| `healthy_data_dir` | `language_large/LQT_result/fMRI_Language` | `MD_large/LQT_result/fMRI_MD` |
 | `file_tag` | `Lang` | `MD` |
 
 ---
