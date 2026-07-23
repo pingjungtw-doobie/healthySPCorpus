@@ -128,7 +128,7 @@ The search-information measure follows:
 
 If you use this code, please cite the manuscript above once it is published. Until then, cite as:
 
-> [Duh et al.] (under review). *Severe Aphasia After Small Bilateral Lesions: A Case Study of Disrupted of High-Probability Structural Pathways.*
+> [Duh et al.] (under review). *Severe Aphasia After Small Bilateral Lesions: A Case Study of Disrupted High-Probability Structural Pathways.*
 
 ---
 
