@@ -118,8 +118,6 @@ The search-information measure follows:
 ---
 
 ## Notes on scale and runtime
-
-- With all 116 AAL nodes, the corpus iterates 116 × 115 = **13,340 ordered source→target pairs** per participant.
 - `search_information_ori` is the dominant cost inside the per-participant loop; it computes shortest-path probabilities across the full `116 × 116` grid.
 - Rank-deficient connectivity matrices receive a tiny diagonal ridge (`1e-7 · I`) so the transition matrix solve inside `search_information_ori` stays well-defined.
 - Progress is printed once per participant (`participant k/N: M unique paths so far`).
